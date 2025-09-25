@@ -1,9 +1,5 @@
 #include "wellum34.dtsi"
 
-/*
- * Вариант подключения: direct pin
- */
-
 &default_transform {
 	col-offset = <18>;
 };
