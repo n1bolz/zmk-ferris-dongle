@@ -6,9 +6,7 @@
 		zmk,matrix_transform = &default_transform;
 	};
 
-	/*
-	 * Вариант подключения: direct pin
-	 */
+	/* Direct pin трансформация */
 	default_transform: keymap_transform_0 {
 		compatible = "zmk,matrix-transform";
 		columns = <34>;
@@ -24,5 +22,11 @@
 	kscan0: kscan {
 		compatible = "zmk,kscan-gpio-direct";
 		wakeup-source;
+		row-gpios = <
+			<&pro_micro 4 GPIO_ACTIVE_HIGH>
+			<&pro_micro 5 GPIO_ACTIVE_HIGH>
+			<&pro_micro 6 GPIO_ACTIVE_HIGH>
+			<&pro_micro 7 GPIO_ACTIVE_HIGH>
+		>;
 	};
 };
