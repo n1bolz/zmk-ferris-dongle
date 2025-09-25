@@ -7,8 +7,8 @@
 ---
 include:
   - board: nice_nano_v2
-    shield: wellum34_left
+    shield: cradio_left
   - board: nice_nano_v2
-    shield: wellum34_right
+    shield: cradio_right
   - board: nice_nano_v2
-    shield: wellum34_dongle
+    shield: cradio_dongle
