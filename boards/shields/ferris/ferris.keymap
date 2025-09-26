@@ -195,7 +195,7 @@
 _ Q          _ W          _ E          _ R         _ T             _ Y          _ U          _ I          _ O          _ P
 _ A          _ S          _ D          _ F         _ G             _ H          _ J          _ K          _ L          _ SEMI
 _ Z          _ X          _ C          _ V         _ B             _ N          _ M          _ COMMA      _ DOT        _ FSLH
-                                       _ SPACE     &la NAV         &la SYM      _ LSFT
+                                       &la NAV     _ SPACE         _ LSFT       &la SYM      
             >;
         };
 
@@ -228,9 +228,9 @@ _ BSL        ___          _ LS(LBKT)   _ LBKT      _ UNDER         _ EQUAL      
 
         nav_layer {
             bindings = <
-&tabber      &swapper_win &swapper_mac ___         _ ESC           _ ESC        _ HOME       _ END        _ BSPC       _ DEL
-&cm_gui      &cm_alt      &cm_ctrl     &cm_sft     _ RET           _ RET        _ LEFT       _ DOWN       _ UP         _ RIGHT
-_ PSPC       _ NSPC       &tog GAM     _ PSCRN     _ TAB           _ TAB        _ PG_UP      _ PG_DN      _ APOS       _ KP_NUM
+&swapper_mac   &tabber      &swapper_win ___         _ ESC           _ PG_UP        _ HOME       _ END      _ BSPC      _ DEL
+&cm_gui        &cm_alt      &cm_ctrl     &cm_sft     _ RET           _ LEFT         _ DOWN       _ UP       _ RIGHT     _ APOS
+_ PSPC         _ NSPC       &tog GAM     _ PSCRN     _ TAB           _ PG_DN        _ RET        _ TAB      _ ESC       _ KP_NUM
                                        &mo CMD     ______          ______       _ CAPS
             >;
         };
