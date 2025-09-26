@@ -9,14 +9,15 @@
 #define ___ &none
 #define ______ &trans
 
-#define DEF 0
-#define GAM 1
-#define GFN 2
-#define SYM 3
-#define NAV 4
-#define NUM 5
-#define ALT 6
-#define CMD 7
+#define EN 0
+#define RU 1
+#define GAM 2
+#define GFN 3
+#define SYMEN 4
+#define SYMRU 5
+#define NAVEN 6
+#define NAVRU 7
+#define NUM 8
 
 #define MEH(key) LS(LC(LA(key)))
 
@@ -175,27 +176,63 @@
                 &kp LALT
                 &kp LGUI
         )
-    };
 
-    conditional_layers {
+        lang_ru: lang_ru {
+            compatible = "zmk,behavior-macro";
+            label = "LANG_RU";
+            #binding-cells = <0>;
+            bindings = <
+                &sl RU            
+                &kp CAPS    
+            >;
+        };
+        
+        lang_en: lang_en {
+            compatible = "zmk,behavior-macro";
+            label = "LANG_EN";
+            #binding-cells = <0>;
+            bindings = <
+                &sl EN
+                &kp CAPS
+            >;
+        };
+
+        conditional_layers {
         compatible = "zmk,conditional-layers";
         tri_layer {
-            if-layers  = <NAV SYM>;
+            if-layers  = <NAV SYMEN>;
             then-layer = <NUM>;
         };
-    };
+      };
+      conditional_layers {
+        compatible = "zmk,conditional-layers";
+        tri_layer {
+            if-layers  = <NAV SYMRU>;
+            then-layer = <NUM>;
+        };
+      };        
+    };    
 };
 
 / {
     keymap {
         compatible = "zmk,keymap";
 
-        def_layer {
+        en_layer {
             bindings = <
 _ Q          _ W          _ E          _ R         _ T             _ Y          _ U          _ I          _ O          _ P
 _ A          _ S          _ D          _ F         _ G             _ H          _ J          _ K          _ L          _ SEMI
 _ Z          _ X          _ C          _ V         _ B             _ N          _ M          _ COMMA      _ DOT        _ FSLH
-                                       &la NAV     _ SPACE         _ LSFT       &la SYM      
+                                       &la NAVEN   _ SPACE         _ LSFT       &la SYM      
+            >;
+        };
+
+        ru_layer {
+            bindings = <
+_ Q          _ W          _ E          _ R         _ T             _ Y          _ U          _ I          _ P          _ LBRC
+_ A          _ S          _ D          _ F         _ G             _ H          _ J          _ K          _ L          _ SCLN
+_ Z          _ X          _ C          _ V         _ B             _ N          _ M          _ COMMA      _ DOT        _ QUOT
+                                       &la NAVRU   _ SPACE         _ LSFT       &la SYMRU      
             >;
         };
 
@@ -204,7 +241,7 @@ _ Z          _ X          _ C          _ V         _ B             _ N          
 _ TAB        _ Q          _ W          _ E         _ R             ___          ___          _ UP         ___          _ TAB
 _ LSFT       _ A          _ S          _ D         _ F             ___          _ LEFT       _ DOWN       _ RIGHT      _ RSFT
 _ LCTRL      _ Z          _ X          _ C         _ V             ___          ___          ___          ___          _ RCTRL
-                                       &mo GFN     _ SPACE         _ PSCRN      &tog GAM     
+                                       &mo GFN     _ SPACE         &tog GAM     _ PSCRN     
             >;
         };
 
@@ -213,52 +250,52 @@ _ LCTRL      _ Z          _ X          _ C         _ V             ___          
 _ ESC        _ N1         _ N2         _ N3        _ N4            &out OUT_TOG &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_CLR_ALL
 _ LALT       _ N5         _ N6         _ N7        _ N8            ___          ___          ___          ___          ___
 _ G          _ J          _ I          _ M         _ T             _ KP_NUM     ___          ___          &sys_reset   &bootloader
-                                       ______      _ RET         ______       ______
+                                       ______      _ RET           ______       ______
             >;
         };
 
-        sym_layer {
+        symen_layer {
+            bindings = <
+_ N1         _ N7         _ N8         _ N9        _ N5            _ N6         _ N7         _ N8         _ N9         _ N0
+_ SEMI       _ N4         _ N5         _ N6        _ MINUS         _ PLUS       &cm_sft      &cm_ctrl     &cm_alt      &cm_gui
+_ BSL        _ N1         _ N2         _ N3        _ UNDER         _ EQUAL      _ RBKT       _ LS(RBKT)   _ PIP        _ BSLH
+                                       _ N0        _ NBSP          ______      ______
+            >;
+        };
+
+        symru_layer {
             bindings = <
 _ N1         _ N2         _ N3         _ N4        _ N5            _ N6         _ N7         _ N8         _ N9         _ N0
 _ SEMI       _ GRV        _ SQT        _ DQT       _ MINUS         _ PLUS       &cm_sft      &cm_ctrl     &cm_alt      &cm_gui
 _ BSL        ___          _ LS(LBKT)   _ LBKT      _ UNDER         _ EQUAL      _ RBKT       _ LS(RBKT)   _ PIP        _ BSLH
-                                       &mo ALT      _ NBSP          ______      ______
+                                       ______      _ NBSP          ______      ______
             >;
         };
 
-        nav_layer {
+        naven_layer {
             bindings = <
 &swapper_mac   &tabber      &swapper_win ___         _ ESC           _ PG_UP        _ HOME       _ END      _ BSPC      _ DEL
 &cm_gui        &cm_alt      &cm_ctrl     &cm_sft     _ RET           _ LEFT         _ DOWN       _ UP       _ RIGHT     _ APOS
 _ PSPC         _ NSPC       &tog GAM     _ PSCRN     _ TAB           _ PG_DN        _ RET        _ TAB      _ ESC       _ KP_NUM
-                                         ______     ______           &mo CMD       _ CAPS
+                                         ______     ______           &mo CMD        &lang_ru
+            >;
+        };
+
+        navru_layer {
+            bindings = <
+&swapper_mac   &tabber      &swapper_win ___         _ ESC           _ PG_UP        _ HOME       _ END      _ BSPC      _ DEL
+&cm_gui        &cm_alt      &cm_ctrl     &cm_sft     _ RET           _ LEFT         _ DOWN       _ UP       _ RIGHT     _ APOS
+_ PSPC         _ NSPC       &tog GAM     _ PSCRN     _ TAB           _ PG_DN        _ RET        _ TAB      _ ESC       _ KP_NUM
+                                         ______     ______           &mo CMD        &lang_en
             >;
         };
 
         num_layer {
             bindings = <
-_ KP_N1      _ KP_N2      _ KP_N3      _ KP_N4     _ KP_N5         _ KP_N6      _ KP_N7      _ KP_N8      _ KP_N9      _ KP_N0
-&cm_gui      &cm_alt      &cm_ctrl     &cm_sft     _ F11           _ F12        &cm_sft      &cm_ctrl     &cm_alt       &cm_gui
-_ F1         _ F2         _ F3         _ F4        _ F5            _ F6         _ F7         _ F8         _ F9         _ F10
-                                       ______      ______          ______       ______
-            >;
-        };
-
-        alt_layer {
-            bindings = <
-_ RA(Q)      _ RA(W)      _ RA(E)      _ RA(R)     _ RA(T)         _ RA(Y)      _ RA(U)      _ RA(I)      _ RA(O)      _ RA(P)
-_ RA(A)      _ RA(S)      _ RA(D)      _ RA(F)     _ RA(G)         _ RA(H)      _ RA(J)      _ RA(K)      _ RA(L)      _ RA(SEMI)
-_ RA(Z)      _ RA(X)      _ RA(C)      _ RA(V)     _ RA(B)         _ RA(N)      _ RA(M)      _ RA(COMMA)  _ RA(DOT)    _ RA(FSLH)
-                                       _ NBSP      _ LSHFT         ______       ______
-            >;
-        };
-
-        cmd_layer {
-            bindings = <
-_ MEH(Q)     _ MEH(W)     _ MEH(E)     _ MEH(R)    _ MEH(T)        _ MEH(Y)     _ C_VOL_DN   _ C_MUTE     _ C_VOL_UP   _ MEH(P)
-_ MEH(A)     _ MEH(S)     _ MEH(D)     _ MEH(F)    _ MEH(G)        _ MEH(H)     _ C_PREV     _ C_PP       _ C_NEXT     _ MEH(SEMI)
-&bootloader  _ MEH(X)     _ MEH(C)     _ MEH(V)    _ MEH(B)        _ MEH(N)     _ MEH(M)     _ MEH(COMMA) _ MEH(DOT)   &bootloader
-                                       ______      ______          _ LGUI       ______
+___          ___          ___          ___         ___               ___          _ F9         _ F10        _ F11        _ F12
+&cm_gui      &cm_alt      &cm_ctrl     &cm_sft     ___               ___          _ F5         _ F6         _ F7         _ F8
+___          ___          ___          ___         ___               ___          _ F1         _ F2         _ F3         _ F4
+                                       ______      ______            ______       ______
             >;
         };
     };
