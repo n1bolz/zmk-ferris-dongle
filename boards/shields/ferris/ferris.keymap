@@ -195,22 +195,7 @@
                 &sl EN
                 &kp CAPS
             >;
-        };
-
-        conditional_layers {
-        compatible = "zmk,conditional-layers";
-        tri_layer {
-            if-layers  = <NAV SYMEN>;
-            then-layer = <NUM>;
-        };
-      };
-      conditional_layers {
-        compatible = "zmk,conditional-layers";
-        tri_layer {
-            if-layers  = <NAV SYMRU>;
-            then-layer = <NUM>;
-        };
-      };        
+        };              
     };    
 };
 
