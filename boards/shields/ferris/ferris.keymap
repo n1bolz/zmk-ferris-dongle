@@ -182,7 +182,7 @@
             label = "LANG_RU";
             #binding-cells = <0>;
             bindings = <
-                &sl RU            
+                &mo RU            
                 &kp CAPS    
             >;
         };
@@ -192,7 +192,7 @@
             label = "LANG_EN";
             #binding-cells = <0>;
             bindings = <
-                &sl EN
+                &mo EN
                 &kp CAPS
             >;
         };        
