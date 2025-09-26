@@ -182,7 +182,8 @@
             label = "LANG_RU";
             #binding-cells = <0>;
             bindings = <
-                &tog RU                            
+                &tog RU
+                &macro_pause_for_release                            
                 &kp CAPS    
             >;
         };
@@ -192,7 +193,8 @@
             label = "LANG_EN";
             #binding-cells = <0>;
             bindings = <
-                &tog EN                
+                &tog EN
+                &macro_pause_for_release                
                 &kp CAPS
             >;
         };        
@@ -214,7 +216,7 @@ _ Z          _ X          _ C          _ V         _ B             _ N          
 
         ru_layer {
             bindings = <
-_ Q          _ W          _ E          _ R         _ T             _ Y          _ U          _ I          _ P          _ LBRC
+_ Q          _ W          _ E          _ R         _ T             _ Y          _ U          _ I          _ P          _ LBKT
 _ A          _ S          _ D          _ F         _ G             _ H          _ J          _ K          _ L          _ SCLN
 _ Z          _ X          _ C          _ V         _ B             _ N          _ M          _ COMMA      _ DOT        _ QUOT
                                        &la NAVRU   _ SPACE         _ LSFT       &la SYMRU      
