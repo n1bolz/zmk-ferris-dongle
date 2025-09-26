@@ -182,8 +182,7 @@
             label = "LANG_RU";
             #binding-cells = <0>;
             bindings = <
-                &tog RU
-                &macro_pause_for_release 50m            
+                &tog RU                            
                 &kp CAPS    
             >;
         };
@@ -193,8 +192,7 @@
             label = "LANG_EN";
             #binding-cells = <0>;
             bindings = <
-                &tog EN
-                &macro_pause_for_release 50m
+                &tog EN                
                 &kp CAPS
             >;
         };        
@@ -243,10 +241,10 @@ _ G          _ J          _ I          _ M         _ T             _ KP_NUM     
 
         symen_layer {
             bindings = <
-_ N1         _ N7         _ N8         _ N9        _ N5            _ N6         _ N7         _ N8         _ N9         _ N0
-_ SEMI       _ N4         _ N5         _ N6        _ MINUS         _ PLUS       &cm_sft      &cm_ctrl     &cm_alt      &cm_gui
-_ BSL        _ N1         _ N2         _ N3        _ UNDER         _ EQUAL      _ RBKT       _ LS(RBKT)   _ PIP        _ BSLH
-                                       _ N0        _ NBSP          ______      ______
+_ APOS       _ N7         _ N8         _ N9        _ LS(APOS)      ___          _ LS(N9)       _ BSLH       _ LS(N0)     _ BSPC
+_ GRAVE      _ N4         _ N5         _ N6        _ MINUS         _ PLUS       _ LS(LBKT)     _ LS(BSLH)   _ LS(RBKT)   ___
+_ LS(GRAVE)  _ N1         _ N2         _ N3        _ UNDER         _ EQUAL      _ LBKT         _ PIP        _ RBKT       _ BSLH
+                                       _ N0        _ LSFT          ______      ______
             >;
         };
 
