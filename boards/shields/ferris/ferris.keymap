@@ -9,6 +9,16 @@
 #define ___ &none
 #define ______ &trans
 
+#define EN 0
+#define RU 1
+#define GAM 2
+#define GFN 3
+#define SYM 4
+#define NAV 5
+#define NUM 6
+#define ALT 7
+#define CMD 8
+
 #define MEH(key) LS(LC(LA(key)))
 
 #define SQT GRAVE
@@ -182,7 +192,7 @@
             label = "LANG_EN";
             #binding-cells = <0>;
             bindings = <
-                &sl EN
+                &tog RU
                 &kp CAPS
             >;
         };        
