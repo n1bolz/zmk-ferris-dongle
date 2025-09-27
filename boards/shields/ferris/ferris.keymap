@@ -240,7 +240,7 @@ _ G          _ J          _ I          _ M         _ T             _ KP_NUM     
         symen_layer {
             bindings = <
 _ APOS       _ N7         _ N8         _ N9        _ LS(APOS)      ___          _ LBKT         ___          _ RBKT         _ BSPC
-_ GRAVE      _ N4         _ N5         _ N6        _ MINUS         _ PLUS       _ LS(N9)       ___          _ LS(N0)       ___
+_ GRAVE      _ N4         _ N5         _ N6        _ MINUS         _ PLUS       _ LS(N9)       ___          _ LS(N0)       _ KP_NUM
 _ LS(GRAVE)  _ N1         _ N2         _ N3        _ UNDER         _ EQUAL      _ LS(LBKT)     _ LS(BSLH)   _ LS(RBKT)     _ BSLH
                                        _ N0        _ LSFT          ______      ______
             >;
@@ -258,9 +258,9 @@ _ LS(GRAVE)  _ N1         _ N2         _ N3        _ UNDER         _ EQUAL      
         nav_layer {
             bindings = <
 &swapper_mac   &tabber      &swapper_win ___         _ ESC           _ PG_UP        _ HOME       _ END      _ BSPC      _ DEL
-&cm_gui        &cm_alt      &cm_ctrl     &cm_sft     _ RET           _ LEFT         _ DOWN       _ UP       _ RIGHT     _ KP_NUM
-_ PSPC         _ NSPC       &tog GAM     _ PSCRN     _ TAB           _ PG_DN        _ RET        _ TAB      _ ESC       &tog RU
-                                         ______     ______           _ NBSP         &lang_swap
+&cm_gui        &cm_alt      &cm_ctrl     &cm_sft     _ RET           _ LEFT         _ DOWN       _ UP       _ RIGHT     &tog RU
+_ PSPC         _ NSPC       &tog GAM     _ PSCRN     _ TAB           _ PG_DN        _ RET        _ TAB      _ ESC       &lang_swap
+                                         ______     ______           _ NBSP         ______
             >;
         };
 
