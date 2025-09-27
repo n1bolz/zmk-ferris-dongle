@@ -183,7 +183,7 @@
             #binding-cells = <0>;
             bindings = <                                                            
                 &kp CAPS
-                &tog RU    
+                &sl RU    
             >;
         };
         
@@ -193,7 +193,7 @@
             #binding-cells = <0>;
             bindings = <                                              
                 &kp CAPS
-                &tog EN
+                &sl EN
             >;
         };        
     };    
