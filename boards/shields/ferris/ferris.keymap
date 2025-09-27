@@ -258,8 +258,8 @@ _ LS(GRAVE)  _ N1         _ N2         _ N3        _ UNDER         _ EQUAL      
         nav_layer {
             bindings = <
 &swapper_mac   &tabber      &swapper_win ___         _ ESC           _ PG_UP        _ HOME       _ END      _ BSPC      _ DEL
-&cm_gui        &cm_alt      &cm_ctrl     &cm_sft     _ RET           _ LEFT         _ DOWN       _ UP       _ RIGHT     _ APOS
-_ PSPC         _ NSPC       &tog GAM     _ PSCRN     _ TAB           _ PG_DN        _ RET        _ TAB      _ ESC       _ KP_NUM
+&cm_gui        &cm_alt      &cm_ctrl     &cm_sft     _ RET           _ LEFT         _ DOWN       _ UP       _ RIGHT     _ KP_NUM
+_ PSPC         _ NSPC       &tog GAM     _ PSCRN     _ TAB           _ PG_DN        _ RET        _ TAB      _ ESC       &tog RU
                                          ______     ______           _ NBSP         &lang_swap
             >;
         };
