@@ -172,35 +172,7 @@
                 &kp LGUI
         )                
     };    
-  };
-
-  combos {
-        compatible = "zmk,combos";
-
-        kha {
-            bindings = <&kp RU_CYRILLIC_HA>;
-            key-positions = <6 7>;
-            layers = <1>;
-        };
-
-        hrdsgn {
-            bindings = <&kp RU_CYRILLIC_HARD_SIGN>;
-            key-positions = <7 8>;
-            layers = <1>;
-        };
-
-        cmben {
-            bindings = <&layer_en>;
-            key-positions = <2 3>;
-            layers = <1>;
-        };
-
-        cmbru {
-            bindings = <&layer_ru>;
-            key-positions = <2 3>;
-            layers = <0>;
-        };
-    };
+  };  
 
     macros {
         to_ru: to_ru {
