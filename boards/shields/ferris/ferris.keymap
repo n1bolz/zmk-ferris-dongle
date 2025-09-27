@@ -173,7 +173,7 @@
             #binding-cells = <0>;
             bindings = <
                 &tog RU            
-                &kp LC(LSHFT)    
+                &kp CAPS    
             >;
         };
         
@@ -183,7 +183,7 @@
             #binding-cells = <0>;
             bindings = <
                 &sl EN
-                &kp LC(LSHFT)
+                &kp CAPS
             >;
         };        
     };
@@ -251,7 +251,7 @@ _ BSL        ___          _ LS(LBKT)   _ LBKT      _ UNDER         _ EQUAL      
 &swapper_mac   &tabber      &swapper_win ___         _ ESC           _ PG_UP        _ HOME       _ END      _ BSPC      _ DEL
 &cm_gui        &cm_alt      &cm_ctrl     &cm_sft     _ RET           _ LEFT         _ DOWN       _ UP       _ RIGHT     _ APOS
 _ PSPC         _ NSPC       &tog GAM     _ PSCRN     _ TAB           _ PG_DN        _ RET        _ TAB      _ ESC       _ KP_NUM
-                                         ______     ______           &mo CMD       _ CAPS
+                                         ______     ______           &lang_en       &lang_ru
             >;
         };
 
