@@ -222,9 +222,9 @@ _ Z          _ X          _ C          _ V         _ B             _ N          
 
         ru_layer {
             bindings = <
-_ Q          _ W          _ E          _ R         _ T             _ Y          _ U          _ I          _ O          _ P
-_ A          _ S          _ D          _ F         _ G             _ H          _ J          _ K          _ L          _ SEMI
-_ Z          _ X          _ C          _ V         _ B             _ N          _ M          _ COMMA      _ DOT        _ FSLH
+_ Q          _ W          _ E          _ R         _ T             _ Y          _ U          _ I          _ P          _ LBKT
+_ A          _ S          _ D          _ F         _ G             _ H          _ J          _ K          _ L          _ SCLN
+_ Z          _ X          _ C          _ V         _ B             _ N          _ M          _ COMMA      _ DOT        _ QUOT
                                        &la NAV     _ SPACE         _ LSFT       &la SYM      
             >;
         };
