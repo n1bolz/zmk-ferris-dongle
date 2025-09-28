@@ -185,8 +185,33 @@
                 &kp CAPS    
             >;
         };        
-        
     };
+
+    combos {
+        compatible = "zmk,combos";
+
+        combo_close_square {
+            timeout-ms = <40>;
+            bindings = <&kp RBKT>;
+            key-positions = <6 7>;
+            layers = <SYMEN>;
+        };
+
+        combo_close_round {
+            timeout-ms = <40>;
+            bindings = <&kp LS(N0)>;
+            key-positions = <16 17>;
+            layers = <SYMEN>;
+        };
+
+        combo_close_curly {
+            timeout-ms = <40>;
+            bindings = <&kp LS(RBKT)>;
+            key-positions = <26 27>;
+            layers = <SYMEN>;
+        };        
+    };
+
 
     conditional_layers {
         compatible = "zmk,conditional-layers";
@@ -239,9 +264,9 @@ _ G          _ J          _ I          _ M         _ T             _ KP_NUM     
 
         symen_layer {
             bindings = <
-_ APOS       _ N7         _ N8         _ N9        _ LS(APOS)      ___          _ LBKT         ___          _ RBKT         _ BSPC
-_ GRAVE      _ N4         _ N5         _ N6        _ MINUS         _ PLUS       _ LS(N9)       ___          _ LS(N0)       _ KP_NUM
-_ LS(GRAVE)  _ N1         _ N2         _ N3        _ UNDER         _ EQUAL      _ LS(LBKT)     _ LS(BSLH)   _ LS(RBKT)     _ BSLH
+_ APOS       _ N7         _ N8         _ N9        _ LS(APOS)      _ LS(N4)     _ LBKT         _ LS(N7)          _ LS(N5)         _ LS(N2)
+_ GRAVE      _ N4         _ N5         _ N6        _ MINUS         _ PLUS       _ LS(N9)       _ LS(N8)          _ LS(N6)         _ LS(N1)
+_ LS(GRAVE)  _ N1         _ N2         _ N3        _ UNDER         _ EQUAL      _ LS(LBKT)     _ LS(BSLH)        _ LS(N3)         _ BSLH
                                        _ N0        _ LSFT          ______      ______
             >;
         };
