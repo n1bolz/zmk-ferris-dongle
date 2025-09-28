@@ -273,9 +273,9 @@ _ LS(GRAVE)  _ N1         _ N2         _ N3        _ UNDER         _ EQUAL      
 
         symru_layer {
             bindings = <
-_ APOS       _ N7         _ N8         _ N9        _ GRAVE         ___          _ LBKT         _ O          ___            _ BSPC
-_ LS(APOS)   _ N4         _ N5         _ N6        _ MINUS         _ PLUS       _ LS(N9)       _ LS(RBKT)   _ LS(N0)       ___
-_ LS(GRAVE)  _ N1         _ N2         _ N3        _ UNDER         _ EQUAL      _ RBKT         _ FSLH       _ LS(FSLH)     _ BSLH
+_ APOS       _ N7         _ N8         _ N9        _ GRAVE         ___          _ LBKT         _ O          _ LS(N2)            _ BSPC
+_ LS(APOS)   _ N4         _ N5         _ N6        _ MINUS         _ PLUS       _ LS(N9)       _ LS(N4)     _ LS(N6)       _ LS(N1)
+_ LS(GRAVE)  _ N1         _ N2         _ N3        _ UNDER         _ EQUAL      _ RBKT         _ FSLH       _ LS(FSLH)     _ LS(N7)
                                        _ N0        _ LSFT          ______      ______
             >;
         };
