@@ -9,6 +9,9 @@
     require-prior-idle-ms = <125>;
 };
 
+#define PARAM_1 0
+#define PARAM_2 0
+
 / {
     behaviors {
         hml: home_row_mod_left {
