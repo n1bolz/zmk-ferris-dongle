@@ -126,20 +126,20 @@ layers:
   - UP ARROW
   - RIGHT ARROW
   - BACKSPACE
-  - '&layer_en'
-  - ''
   - {t: Game, h: toggle}
+  - ''
   - Sft+PRINTSCREEN
+  - ''
   - TAB
   - END
   - PAGE DOWN
   - PAGE UP
   - HOME
-  - '&layer_ru'
+  - DELETE
   - {type: held}
   - ''
   - {t: ▽, type: trans}
-  - {t: DEL, h: Adjust}
+  - Adjust
   Adjust:
   - '&bootloader'
   - F1
@@ -265,3 +265,11 @@ combos:
   k: '&grt_eql'
 - p: [27, 28]
   k: '&chan'
+- p: [13, 16]
+  k: CAPS
+- p: [2, 3]
+  k: '&layer_ru'
+  l: [Base]
+- p: [2, 3]
+  k: '&layer_en'
+  l: [Ru]
