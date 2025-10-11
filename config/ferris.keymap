@@ -322,10 +322,10 @@
 
         nav {
             bindings = <
-&kp NUMBER_1   &kp N2    &kp N3               &kp N4     &kp N5     &kp N6    &kp N7          &kp N8        &kp N9           &kp N0
-&hml LGUI ESC  &kp LALT  &kp LCTRL            &kp LSHFT  &kp ENTER  &kp LEFT  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &kp BACKSPACE
-&tog 6         &none     &kp LS(PRINTSCREEN)  &none      &kp TAB    &kp END   &kp PAGE_DOWN   &kp PAGE_UP   &kp HOME         &kp DELETE
-                                              &none      &none      &trans    &mo 5
+&kp NUMBER_1   &kp N2    &kp N3     &kp N4               &kp N5     &kp N6    &kp N7          &kp N8        &kp N9           &kp N0
+&hml LGUI ESC  &kp LALT  &kp LCTRL  &kp LSHFT            &kp ENTER  &kp LEFT  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &kp BACKSPACE
+&none          &none     &none      &kp LS(PRINTSCREEN)  &kp TAB    &kp END   &kp PAGE_DOWN   &kp PAGE_UP   &kp HOME         &kp DELETE
+                                    &none                &none      &trans    &mo 5
             >;
 
             display-name = "Navigation";
@@ -334,7 +334,7 @@
         adj {
             bindings = <
 &bootloader   &kp F1        &kp F2         &kp F3         &kp F4   &bt BT_SEL 0  &bt BT_SEL 1         &bt BT_SEL 2       &bt BT_SEL 3        &bt BT_CLR
-&kp LGUI      &hml LALT F5  &hml LSHFT F6  &hml LCTRL F7  &kp F8   &none         &hmr RCTRL C_VOL_DN  &hmr RSHFT C_MUTE  &hmr LALT C_VOL_UP  &kp RGUI
+&kp LGUI      &hml LALT F5  &hml LSHFT F6  &hml LCTRL F7  &kp F8   &tog 6        &hmr RCTRL C_VOL_DN  &hmr RSHFT C_MUTE  &hmr LALT C_VOL_UP  &kp RGUI
 &out OUT_BLE  &kp F9        &kp F10        &kp F11        &kp F12  &none         &kp C_PREV           &kp C_PP           &kp C_NEXT          &out OUT_USB
                                            &trans         &trans   &trans        &none
             >;
