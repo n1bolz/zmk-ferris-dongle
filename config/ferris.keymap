@@ -2,6 +2,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/outputs.h>
 
 &mt {
     quick-tap-ms = <200>;
@@ -48,7 +49,7 @@
             quick-tap-ms = <175>;
             require-prior-idle-ms = <150>;
             hold-trigger-on-release;
-        };        
+        };
     };
 
     combos {
@@ -66,151 +67,35 @@
             layers = <1>;
         };
 
-        eqval {
-            bindings = <&kp EQUAL>;
-            key-positions = <17 18>;
-            layers = <0 1>;
-        };
-
         ru-io {
             bindings = <&kp RU_CYRILLIC_IO>;
             key-positions = <3 4>;
             layers = <1>;
         };
 
-        lpar {
-            bindings = <&kp LPAR>;
+        declar {
+            bindings = <&declar>;
             key-positions = <16 17>;
-            layers = <0>;
         };
 
-        rpar {
-            bindings = <&kp RPAR>;
-            key-positions = <16 18>;
-            layers = <0>;
+        not_eqv {
+            bindings = <&not_equal>;
+            key-positions = <17 18>;
         };
 
-        lbrc {
-            bindings = <&kp LBRC>;
-            key-positions = <11 12>;
-            layers = <0>;
+        les_eqv {
+            bindings = <&les_eql>;
+            key-positions = <12 11>;
         };
 
-        rbrc {
-            bindings = <&kp RBRC>;
-            key-positions = <11 13>;
-            layers = <0>;
-        };
-
-        lbkt {
-            bindings = <&kp LBKT>;
-            key-positions = <6 7>;
-            layers = <0>;
-        };
-
-        rbkt {
-            bindings = <&kp RBKT>;
-            key-positions = <6 8>;
-        };
-
-        excl {
-            bindings = <&kp EXCL>;
-            key-positions = <29 28>;
-        };
-
-        dqt {
-            bindings = <&kp DQT>;
-            key-positions = <17 26>;
-            layers = <0>;
-        };
-
-        sqt {
-            bindings = <&kp SQT>;
-            key-positions = <17 28>;
-            layers = <0>;
-        };
-
-        undr {
-            bindings = <&kp UNDER>;
-            key-positions = <7 8>;
-            layers = <0>;
-        };
-
-        astr {
-            bindings = <&kp ASTRK>;
+        grt_eqv {
+            bindings = <&grt_eql>;
             key-positions = <12 13>;
-            layers = <0>;
         };
 
-        amps {
-            bindings = <&kp AMPS>;
-            key-positions = <22 21>;
-            layers = <0>;
-        };
-
-        plus {
-            bindings = <&kp PLUS>;
-            key-positions = <26 27>;
-            layers = <0>;
-        };
-
-        minus {
-            bindings = <&kp MINUS>;
+        chan {
+            bindings = <&chan>;
             key-positions = <27 28>;
-        };
-
-        pipe {
-            bindings = <&kp PIPE>;
-            key-positions = <19 18>;
-            layers = <0>;
-        };
-
-        caret {
-            bindings = <&kp CARET>;
-            key-positions = <22 23>;
-            layers = <0>;
-        };
-
-        grave {
-            bindings = <&kp GRAVE>;
-            key-positions = <8 9>;
-            layers = <0>;
-        };
-
-        tilde {
-            bindings = <&kp TILDE>;
-            key-positions = <1 2>;
-            layers = <0>;
-        };
-
-        at {
-            bindings = <&kp AT>;
-            key-positions = <2 3>;
-            layers = <0>;
-        };
-
-        dollar {
-            bindings = <&kp DOLLAR>;
-            key-positions = <3 4>;
-            layers = <0>;
-        };
-
-        hash {
-            bindings = <&kp HASH>;
-            key-positions = <21 12>;
-            layers = <0>;
-        };
-
-        proc {
-            bindings = <&kp PRCNT>;
-            key-positions = <12 23>;
-            layers = <0>;
-        };
-
-        bslsh {
-            bindings = <&kp BACKSLASH>;
-            key-positions = <20 21>;
-            layers = <0>;
         };
     };
 
@@ -400,20 +285,19 @@
         sym_en {
             display-name = "Symbols";
             bindings = <
-&kp TILDE       &kp LT          &kp EQUAL         &kp GT           &kp GRAVE                    &kp CARET  &kp LBKT         &kp UNDER        &kp RBKT        &kp DLLR
-  &hml LGUI BSLH  &hml LALT LPAR  &hml LSHFT MINUS  &hml LCTRL RPAR  &kp PLUS                     &kp PRCNT  &hmr RCTRL LBRC  &hmr RSHFT SEMI  &hmr LALT RBRC  &hmr RGUI EXCL
-  &kp HASH        &kp STAR        &kp COLON         &kp FSLH         &kp AMPS                     &kp AT     &kp PIPE         &kp COMMA        &kp DOT         &kp QMARK
-                                                    &trans           &mo 5      &trans    &trans  &none      &trans
-                                                   &mo 5       &trans       &trans     &none
+&kp TILDE       &kp LT          &kp EQUAL         &kp GT           &kp GRAVE   &kp CARET  &kp LBKT         &kp UNDER       &kp RBKT        &kp AMPS
+&hml LGUI BSLH  &hml LALT LPAR  &hml LSHFT MINUS  &hml LCTRL RPAR  &kp PLUS    &kp PRCNT  &hmr RCTRL LBRC  &hmr RSHFT DQT  &hmr LALT RBRC  &hmr RGUI EXCL
+&kp HASH        &kp APOS        &kp ASTRK         &kp FSLH         &kp DOLLAR  &kp AT     &kp PIPE         &kp SEMI        &kp COLON       &kp QMARK
+                                                  &mo 5            &none       &trans     &trans
             >;
         };
 
         sym_ru {
             bindings = <
-&en TILDE               &en LT          &kp EQUAL         &en GT           &en GRAVE  &en CARET  &en LBKT  &kp UNDER           &en RBKT    &en DLLR
-&hml LGUI RU_BACKSLASH  &hml LALT LPAR  &hml LCTRL MINUS  &hml LSHFT RPAR  &kp PLUS   &kp PRCNT  &en LBRC  &hmr RSHFT RU_SEMI  &en RBRC    &hmr RGUI EXCL
-&en HASH                &kp STAR        &kp RU_COLON      &kp RU_FSLH      &en AMPS   &en AT     &en PIPE  &kp RU_COMMA        &kp RU_DOT  &kp RU_QMARK
-                                                          &mo 5            &trans     &trans     &none
+&en TILDE               &en LT          &kp EQUAL         &en GT           &en GRAVE   &en CARET  &en LBKT  &kp UNDER           &en RBKT    &en AMPS
+&hml LGUI RU_BACKSLASH  &hml LALT LPAR  &hml LCTRL MINUS  &hml LSHFT RPAR  &kp PLUS    &kp PRCNT  &en LBRC  &hmr RSHFT RU_SEMI  &en RBRC    &hmr RGUI EXCL
+&en HASH                &kp RU_COLON    &kp STAR          &kp RU_FSLH      &en DOLLAR  &en AT     &en PIPE  &kp RU_COMMA        &kp RU_DOT  &kp RU_QMARK
+                                                          &mo 5            &trans      &trans     &none
             >;
 
             display-name = "Symbols";
@@ -432,10 +316,10 @@
 
         adj {
             bindings = <
-&bootloader  &kp F1        &kp F2         &kp F3         &kp F4                     &bt BT_SEL 0  &bt BT_SEL 1         &bt BT_SEL 2       &bt BT_SEL 3        &bt BT_CLR
-&kp LGUI     &hml LALT F5  &hml LSHFT F6  &hml LCTRL F7  &kp F8                     &out OUT_BLE  &hmr RCTRL C_VOL_DN  &hmr RSHFT C_MUTE  &hmr LALT C_VOL_UP  &kp RGUI
-&none        &kp F9        &kp F10        &kp F11        &kp F12                    &out OUT_USB  &kp C_PREV           &kp C_PP           &kp C_NEXT          &studio_unlock
-                                                        &trans     &trans   &trans   &none
+&bootloader   &kp F1        &kp F2         &kp F3         &kp F4   &bt BT_SEL 0  &bt BT_SEL 1         &bt BT_SEL 2       &bt BT_SEL 3        &bt BT_CLR
+&kp LGUI      &hml LALT F5  &hml LSHFT F6  &hml LCTRL F7  &kp F8   &none         &hmr RCTRL C_VOL_DN  &hmr RSHFT C_MUTE  &hmr LALT C_VOL_UP  &kp RGUI
+&out OUT_BLE  &kp F9        &kp F10        &kp F11        &kp F12  &none         &kp C_PREV           &kp C_PP           &kp C_NEXT          &out OUT_USB
+                                           &trans         &trans   &trans        &none
             >;
 
             display-name = "Adjust";
