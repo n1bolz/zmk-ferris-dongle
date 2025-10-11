@@ -125,7 +125,7 @@ layers:
   - DOWN ARROW
   - UP ARROW
   - RIGHT ARROW
-  - ''
+  - BACKSPACE
   - '&layer_en'
   - ''
   - {t: Game, h: toggle}
@@ -138,7 +138,7 @@ layers:
   - '&layer_ru'
   - {type: held}
   - ''
-  - BACKSPACE
+  - {t: ▽, type: trans}
   - {t: DEL, h: Adjust}
   Adjust:
   - '&bootloader'
