@@ -126,10 +126,10 @@ layers:
   - UP ARROW
   - RIGHT ARROW
   - BACKSPACE
-  - {t: Game, h: toggle}
+  - ''
+  - ''
   - ''
   - Sft+PRINTSCREEN
-  - ''
   - TAB
   - END
   - PAGE DOWN
@@ -156,7 +156,7 @@ layers:
   - {t: F6, h: LSHFT}
   - {t: F7, h: LCTRL}
   - F8
-  - ''
+  - {t: Game, h: toggle}
   - {t: VOL DN, h: RCTRL}
   - {t: MUTE, h: RSHFT}
   - {t: VOL UP, h: LALT}
