@@ -305,10 +305,10 @@
 
         nav {
             bindings = <
-&kp NUMBER_1   &kp N2    &kp N3     &kp N4               &kp N5     &kp N6         &kp N7          &kp N8        &kp N9           &kp N0
-&hml LGUI ESC  &kp LALT  &kp LCTRL  &kp LSHFT            &kp ENTER  &kp LEFT       &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &none
-&layer_en      &none     &tog 6     &kp LS(PRINTSCREEN)  &kp TAB    &kp END        &kp PAGE_DOWN   &kp PAGE_UP   &kp HOME         &layer_ru
-                                    &none                &none      &kp BACKSPACE  &numl 5 DEL
+&kp NUMBER_1   &kp N2    &kp N3     &kp N4               &kp N5     &kp N6    &kp N7          &kp N8        &kp N9           &kp N0
+&hml LGUI ESC  &kp LALT  &kp LCTRL  &kp LSHFT            &kp ENTER  &kp LEFT  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &kp BACKSPACE
+&layer_en      &none     &tog 6     &kp LS(PRINTSCREEN)  &kp TAB    &kp END   &kp PAGE_DOWN   &kp PAGE_UP   &kp HOME         &layer_ru
+                                    &none                &none      &trans    &numl 5 DEL
             >;
 
             display-name = "Navigation";
