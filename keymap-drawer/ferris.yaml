@@ -80,7 +80,7 @@ layers:
   - '&en LBKT'
   - _
   - '&en RBKT'
-  - '&en DLLR'
+  - '&en AMPS'
   - '&hml LGUI (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_BACKSLASH_AND_PIPE))'
   - {t: (, h: LALT}
   - {t: '-', h: LCTRL}
@@ -92,10 +92,10 @@ layers:
   - '&en RBRC'
   - {t: '!', h: RGUI}
   - '&en HASH'
-  - '*'
   - (LS(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD 6 AND CARET)))
+  - '*'
   - ((LS(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD BACKSLASH AND PIPE))))
-  - '&en AMPS'
+  - '&en DOLLAR'
   - '&en AT'
   - '&en PIPE'
   - (LS(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD SLASH AND QUESTION MARK)))
@@ -156,23 +156,23 @@ layers:
   - {t: F6, h: LSHFT}
   - {t: F7, h: LCTRL}
   - F8
-  - OUT BLE
+  - ''
   - {t: VOL DN, h: RCTRL}
   - {t: MUTE, h: RSHFT}
   - {t: VOL UP, h: LALT}
   - RGUI
-  - ''
+  - OUT BLE
   - F9
   - F10
   - F11
   - F12
-  - OUT USB
+  - ''
   - PREV
   - PP
   - NEXT
-  - '&studio_unlock'
-  - {t: ▽, type: trans}
+  - OUT USB
   - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
   Game:
@@ -252,75 +252,16 @@ combos:
 - p: [26, 27]
   k: (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD RIGHT BRACKET AND RIGHT BRACE))
   l: [Ru]
-- p: [17, 18]
-  k: '='
-  l: [Base, Ru]
 - p: [3, 4]
   k: (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD GRAVE ACCENT AND TILDE))
   l: [Ru]
 - p: [16, 17]
-  k: (
-  l: [Base]
-- p: [16, 18]
-  k: )
-  l: [Base]
-- p: [11, 12]
-  k: '{'
-  l: [Base]
-- p: [11, 13]
-  k: '}'
-  l: [Base]
-- p: [6, 7]
-  k: '['
-  l: [Base]
-- p: [6, 8]
-  k: ']'
-- p: [29, 28]
-  k: '!'
-- p: [17, 26]
-  k: '"'
-  l: [Base]
-- p: [17, 28]
-  k: ''''
-  l: [Base]
-- p: [7, 8]
-  k: _
-  l: [Base]
+  k: '&declar'
+- p: [17, 18]
+  k: '&not_equal'
+- p: [12, 11]
+  k: '&les_eql'
 - p: [12, 13]
-  k: '*'
-  l: [Base]
-- p: [22, 21]
-  k: '&'
-  l: [Base]
-- p: [26, 27]
-  k: +
-  l: [Base]
+  k: '&grt_eql'
 - p: [27, 28]
-  k: '-'
-- p: [19, 18]
-  k: '|'
-  l: [Base]
-- p: [22, 23]
-  k: ^
-  l: [Base]
-- p: [8, 9]
-  k: '`'
-  l: [Base]
-- p: [1, 2]
-  k: '~'
-  l: [Base]
-- p: [2, 3]
-  k: '@'
-  l: [Base]
-- p: [3, 4]
-  k: $
-  l: [Base]
-- p: [21, 12]
-  k: '#'
-  l: [Base]
-- p: [12, 23]
-  k: '%'
-  l: [Base]
-- p: [20, 21]
-  k: \
-  l: [Base]
+  k: '&chan'
