@@ -138,7 +138,7 @@ layers:
   - '&layer_ru'
   - {type: held}
   - ''
-  - Alt+BACKSPACE
+  - BACKSPACE
   - {t: DEL, h: Adjust}
   Adjust:
   - '&bootloader'
