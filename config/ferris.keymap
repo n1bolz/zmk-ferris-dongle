@@ -282,7 +282,7 @@
 &kp Q        &kp W        &kp E         &kp R         &kp T      &kp Y          &kp U         &kp I         &kp O        &kp P
 &hml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHFT F  &kp G      &kp H          &hmr RSHFT J  &hmr LCTRL K  &hmr LALT L  &hmr RGUI SEMICOLON
 &kp Z        &kp X        &kp C         &kp V         &kp B      &kp N          &kp M         &kp COMMA     &kp DOT      &kp SQT
-                                        &mo 4         &kp SPACE  &kp BACKSPACE  &mo 2
+                                        &mo 4         &kp SPACE  &numl 8 ENTER  &mo 2
             >;
 
             display-name = "Base";
@@ -293,7 +293,7 @@
 &kp RU_CYRILLIC_SHORT_I   &kp RU_CYRILLIC_TSE         &kp RU_CYRILLIC_U          &kp RU_CYRILLIC_KA         &kp RU_CYRILLIC_IE  &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE        &kp RU_CYRILLIC_SHA        &kp RU_CYRILLIC_ZE        &kp RU_CYRILLIC_HA
 &hml LGUI RU_CYRILLIC_EF  &hml LALT RU_CYRILLIC_YERU  &hml LCTRL RU_CYRILLIC_VE  &hml LSHIFT RU_CYRILLIC_A  &kp RU_CYRILLIC_PE  &kp RU_CYRILLIC_ER  &hmr RSHFT RU_CYRILLIC_O   &hmr RCTRL RU_CYRILLIC_EL  &hmr LALT RU_CYRILLIC_DE  &hmr RGUI RU_CYRILLIC_ZHE
 &kp RU_CYRILLIC_YA        &kp RU_CYRILLIC_CHE         &kp RU_CYRILLIC_ES         &kp RU_CYRILLIC_EM         &kp RU_CYRILLIC_I   &kp RU_CYRILLIC_TE  &kp RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE         &kp RU_CYRILLIC_YU        &kp RU_CYRILLIC_E
-                                                                                 &mo 4                      &kp SPACE           &kp BACKSPACE       &mo 3
+                                                                                 &mo 4                      &kp SPACE           &numl 8 ENTER       &mo 3
             >;
 
             display-name = "Ru";
@@ -322,10 +322,10 @@
 
         nav {
             bindings = <
-&kp NUMBER_1   &kp N2         &kp N3         &kp N4     &kp N5     &kp N6         &kp N7          &kp N8        &kp N9           &kp N0
-&hml LGUI ESC  &kp LALT       &kp LCTRL      &kp LSHFT  &kp ENTER  &kp LEFT       &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &kp DEL
-&kp END        &kp PAGE_DOWN  &kp PAGE_DOWN  &kp HOME   &kp TAB    &none          &kp ENTER       &kp TAB       &kp ESC          &kp LS(PRINTSCREEN)
-                                             &none      &none      &kp LA(SPACE)  &mo 5
+&none          &none     &none      &none                &kp ESC    &kp HOME       &kp PAGE_DOWN   &kp PAGE_UP   &kp BACKSPACE    &kp DELETE
+&hml LGUI ESC  &kp LALT  &kp LCTRL  &kp LSHFT            &kp ENTER  &kp LEFT       &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &none
+&layer_en      &none     &none      &kp LS(PRINTSCREEN)  &kp TAB    &kp END        &kp ENTER       &kp TAB       &kp ESC          &layer_ru
+                                    &none                &none      &kp LA(SPACE)  &mo 5
             >;
 
             display-name = "Navigation";
@@ -359,6 +359,16 @@
 &kp LEFT_ALT  &kp N5  &kp N6  &kp N7  &kp N8  &none         &none         &none         &none         &none
 &kp G         &kp J   &kp I   &kp M   &kp T   &none         &none         &none         &none         &bootloader
                               &none   &none   &kp ENTER     &none
+            >;
+        };
+
+        numb {
+            display-name = "Number";
+            bindings = <
+&none  &kp N7  &kp N8  &kp N9  &none  &none  &none  &none  &none  &none
+&none  &kp N4  &kp N5  &kp N6  &none  &none  &none  &none  &none  &none
+&none  &kp N1  &kp N2  &kp N3  &none  &none  &none  &none  &none  &none
+                       &kp N0  &none  &none  &none
             >;
         };
     };
